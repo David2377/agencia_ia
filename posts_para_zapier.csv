@@ -1,0 +1,15 @@
+import pandas as pd
+
+# Ejemplo de posts generados
+posts = [
+    {"fecha": "2025-09-08", "tema": "salud", "copy": "Post sobre ejercicio", "hashtags": ["#salud","#fitness"], "estado": "borrador"},
+    {"fecha": "2025-09-09", "tema": "nutrición", "copy": "Post sobre frutas", "hashtags": ["#frutas","#nutricion"], "estado": "borrador"}
+]
+
+# Convertir a DataFrame
+df = pd.DataFrame(posts)
+
+# Guardar en CSV
+df.to_csv("posts_para_zapier.csv", index=False)
+print("✅ CSV generado listo para automatización")
+
